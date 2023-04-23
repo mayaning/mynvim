@@ -6,14 +6,14 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- 自动切换输入法，需要安装 im-select
 -- https://github.com/daipeihust/im-select
-autocmd("InsertLeave", {
-  group = myAutoGroup,
-  callback = require("utils.im-select").insertLeave,
-})
-autocmd("InsertEnter", {
-  group = myAutoGroup,
-  callback = require("utils.im-select").insertEnter,
-})
+-- autocmd("InsertLeave", {
+--   group = myAutoGroup,
+--   callback = require("utils.im-select").insertLeave,
+-- })
+-- autocmd("InsertEnter", {
+--   group = myAutoGroup,
+--   callback = require("utils.im-select").insertEnter,
+-- })
 
 -- 进入Terminal 自动进入插入模式
 autocmd("TermOpen", {

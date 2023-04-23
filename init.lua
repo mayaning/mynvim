@@ -25,3 +25,14 @@ require("dap.setup")
 -- utils
 -- 复制到windows剪贴板
 -- require('utils.fix-yank')
+
+local vim_conf_files = {
+    "plugins.vim", -- all the plugins installed and their configurations
+}
+
+-- source all the core config files
+for _, name in ipairs(vim_conf_files) do
+  local path = string.format("%s/vimconfig/%s", vim.fn.stdpath("config"), name)
+  local source_cmd = "source " .. path
+  vim.cmd(source_cmd)
+end

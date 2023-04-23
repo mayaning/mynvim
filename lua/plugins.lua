@@ -313,6 +313,14 @@ packer.startup({
     -- go
     use("leoluz/nvim-dap-go")
 
+    use {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    }
+
+    -- Show undo history visually
+    use { "simnalamburt/vim-mundo", cmd = { "MundoToggle", "MundoShow" } }
+
     --[[ not work
 
     use({

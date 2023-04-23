@@ -321,6 +321,10 @@ packer.startup({
     -- Show undo history visually
     use { "simnalamburt/vim-mundo", cmd = { "MundoToggle", "MundoShow" } }
 
+    -- show file tags in vim window
+    use { "liuchengxu/vista.vim", cmd = "Vista" }
+
+
     --[[ not work
 
     use({

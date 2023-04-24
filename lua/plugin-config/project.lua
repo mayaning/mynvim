@@ -13,16 +13,16 @@ end
 project.setup({
   detection_methods = { "pattern" },
   patterns = {
-    "README.md",
+--    "README.md",
     "Cargo.toml",
-    "package.json",
-    ".sln",
-    ".git",
-    "_darcs",
-    ".hg",
-    ".bzr",
-    ".svn",
-    "Makefile",
+--    "package.json",
+--    ".sln",
+--    ".git",
+--    "_darcs",
+--    ".hg",
+--    ".bzr",
+--    ".svn",
+--    "Makefile",
   },
 })
 

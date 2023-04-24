@@ -10,6 +10,7 @@ local opts = {
 
 return {
   on_setup = function(server)
+    opts.capabilities.offsetEncoding = "utf-8"
     server.setup(opts)
   end,
 }

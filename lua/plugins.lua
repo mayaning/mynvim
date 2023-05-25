@@ -257,6 +257,9 @@ packer.startup({
       end,
     })
 
+    -- vim-one
+    use("rakr/vim-one")
+
     -- OceanicNext
     -- use({ "mhartington/oceanic-next", event = "VimEnter" })
 

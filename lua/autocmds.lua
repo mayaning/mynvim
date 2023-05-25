@@ -75,3 +75,19 @@ autocmd("BufWrite", {
   pattern = saveable_type,
   command = "mkview",
 })
+
+-- 窗口获取焦点, 非插入模式，切换为相对行号
+autocmd({"BufEnter", "FocusGained", "InsertLeave", "WinEnter"},
+    {
+        group = myAutoGroup,
+        pattern = "*",
+        command = [[if &nu | set rnu   | endif]]
+})
+
+-- 窗口失去焦点后, 插入模式，切换为绝对行号
+autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"},
+    {
+        group = myAutoGroup,
+        pattern = "*",
+        command = [[if &nu | set nornu | endif]]
+})

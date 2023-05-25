@@ -27,7 +27,7 @@ require("dap.setup")
 -- require('utils.fix-yank')
 
 local vim_conf_files = {
-    "plugins.vim", -- all the plugins installed and their configurations
+    "plugins.vim",       -- 使用vim scripts配置的插件
 }
 
 -- source all the core config files

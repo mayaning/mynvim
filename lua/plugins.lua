@@ -328,6 +328,35 @@ packer.startup({
     use { "liuchengxu/vista.vim", cmd = "Vista" }
 
 
+    -- >>> Visual-Mark
+    -- 
+    -- 安装 visualmark.vim 后，如果是在 Ubuntu 下做标记，会报一个“E197 不能设定语言为
+    -- "en_US""的错误，但是在 Windows 下却不会。在网上找了一下，发现修复方法。
+    -- 只要将exec ":lan mes en_US" 修改为 exec ":lan POSIX" 即可，为了能够在两个系统
+    -- 中都能使用，于是修改了一下 visualmark.vim 源码，就是在 exec 外加了一个判断系统
+    -- 的语句。本来还想直接上传一份供大家下载使用，才发现 Iteye 居然只能上传图像....
+    -- 这里就提供具体修改方法：
+    -- 使用文本编辑器打开 visualmark.vim
+    -- 定位到
+    -- exec ":lan mes en_US"
+    -- 修改为
+    -- if has("win32") || has("win95") || has("win64") || has("win16")
+    --    exec ":lan mes en_US"
+    -- else
+    --    exec ":lan POSIX"
+    -- endif
+    -- 保存即可。
+    -- 
+    -- If you do not like the highlighting scheme, you could change "SignColor" in
+    -- the script.  
+    -- >>>>
+    use ("vim-scripts/Visual-Mark")
+    use ("vim-scripts/Mark")
+    use ("Lokaltog/vim-easymotion")
+    -- github copilot 
+    use("github/copilot.vim")
+
+
     --[[ not work
 
     use({

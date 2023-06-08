@@ -50,3 +50,26 @@ let g:vista_echo_cursor = 0
 let g:vista_stay_on_open = 0
 
 nnoremap <silent> <Space>t :<C-U>Vista!!<CR>
+
+
+""""""""""""""""""""""""""" easymotion settings """"""""""""""""""""""""""""""""""
+" easymotion
+" 
+" 功能说明:
+" 快速跳转
+" 
+" 配置:
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+" 跳转到当前光标前后的位置(w/b)
+" 快捷键<leader><leader>w和<leader><leader>b
+" 搜索跳转(s)
+" 快捷键<leader><leader>s, 然后输入要搜索的字母, 这个跳转是双向的
+" 行级跳转(jk)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+" 行内跳转(hl)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+" 重复上一次操作, 类似repeat插件, 很强大
+map <Leader><leader>. <Plug>(easymotion-repeat)

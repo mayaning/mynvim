@@ -52,7 +52,7 @@ let g:vista_stay_on_open = 0
 nnoremap <silent> <Space>t :<C-U>Vista!!<CR>
 
 
-""""""""""""""""""""""""""" easymotion settings """"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""" easymotion settings """""""""""""""""""""""""""""""
 " easymotion
 " 
 " 功能说明:
@@ -73,3 +73,25 @@ map <Leader><Leader>k <Plug>(easymotion-k)
 map <Leader><leader>l <Plug>(easymotion-lineforward)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <Leader><leader>. <Plug>(easymotion-repeat)
+
+
+"""""""""""""""""""""""" VIM 的自动换行及自动折行设置 """"""""""""""""""""""""
+" 自动换行是每行超过 n 个字的时候 vim 自动加上换行符
+" 需要注意的是，如果一个段落的首个单词很长，超出了自动换行设置的字符，
+" 这种情况下不会换行。
+" 于是，中文就悲剧了，因为中文中很少出现空格，字之间没有，句子之间也没有。
+" 于是不会触发自动换行的处理。
+" 对已经存在的文本，不做自动换行处理，只有新输入文本的才会触发。
+" 如要对已存在的文本应用自动换行，只要选中它们，然后按gq就可以了。
+set textwidth=80
+" 上面所说的中文不能自动换行的问题，可以通过下面的配置解决.
+" m - Also break at a multi-byte character above 255. This is useful for
+" Asian text where every character is a word on its own.
+" M - When joining lines, don't insert a space before or after a
+" multi-byte character. Overrules the 'B' flag.
+set formatoptions+=mM
+" 自动折行是把长的一行用多行显示 , 不在文件里加换行符
+" 设置自动折行(默认开启)
+set wrap
+" 设置不自动折行
+" set nowrap

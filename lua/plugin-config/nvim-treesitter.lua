@@ -66,7 +66,9 @@ treesitter.setup({
       -- Set to false if you have an `updatetime` of ~100.
       clear_on_cursor_move = true,
     },
-    highlight_current_scope = { enable = true },
+    -- 高亮当前作用域(代码块)
+    -- highlight_current_scope = { enable = true },
+    highlight_current_scope = { enable = false },
   },
   -- nvim-treesitter/nvim-treesitter-textobjects
   textobjects = {

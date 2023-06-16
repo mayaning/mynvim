@@ -261,25 +261,25 @@ packer.startup({
     use("rakr/vim-one")
 
     -- OceanicNext
-    -- use({ "mhartington/oceanic-next", event = "VimEnter" })
+    use({"mhartington/oceanic-next", event = "VimEnter"})
 
     -- gruvbox
-    -- use({
-    --   "ellisonleao/gruvbox.nvim",
-    --   requires = { "rktjmp/lush.nvim" },
-    -- })
+    use({
+       "ellisonleao/gruvbox.nvim",
+       requires = { "rktjmp/lush.nvim" },
+    })
 
     -- zephyr
-    -- use("glepnir/zephyr-nvim")
+    use("glepnir/zephyr-nvim")
 
     -- nord
-    -- use("shaunsingh/nord.nvim")
+    use("shaunsingh/nord.nvim")
 
-    -- onedark
-    -- use("ful1e5/onedark.nvim")
+    -- onedark 
+    use("ful1e5/onedark.nvim")
 
     -- nightfox
-    -- use("EdenEast/nightfox.nvim")
+    use("EdenEast/nightfox.nvim")
 
     -------------------------------------------------------
     -- git
@@ -365,7 +365,7 @@ packer.startup({
     -- 6．Ctrl+ ]跳到光标所在函数或者结构体的定义处
     -- 7．Ctrl+ T返回查找或跳转
     -- “$vi –t tag” ：在运行vim的时候加上“-t”参数，例如：[/usr/src]$vim
-    -- -tmain这个命令将打开定义“main”（变量或函数或其它）的文件，并把光标定位
+    -- -t main这个命令将打开定义“main”（变量或函数或其它）的文件，并把光标定位
     -- 到这一行。如果这个变量或函数有多处定义，
     -- 在VI命令行模式 “：ts”命令就能列出一个列表供用户选择。
     -- “：tp”为上一个tag标记文件，

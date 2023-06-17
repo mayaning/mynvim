@@ -1,3 +1,8 @@
+
+""""""""""""""""""""""""Global settings"""""""""""""""""""""""
+set tags=./tags,tags
+
+
 """"""""""""""""""""""""vim-mundo settings"""""""""""""""""""""""
 let g:mundo_verbose_graph = 0
 let g:mundo_width = 80

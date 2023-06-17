@@ -378,7 +378,9 @@ packer.startup({
     -- 注意：运行vim的时候，必须在“tags”文件所在的目录下运行。
     -- 否则，运行vim的时候还要用“:set tags=”命令设定“tags”文件的路径，
     -- 这样vim才能找到“tags”文件。在完成编码时，可以手工删掉tags文件
-    use("ludovicchabant/vim-gutentags")
+    -- 
+    -- 这个插件会自动创建tags文件，在大工程中会很慢，所以不用
+    -- use("ludovicchabant/vim-gutentags")
 
     --[[ not work
 

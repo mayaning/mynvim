@@ -123,12 +123,15 @@ packer.startup({
     })
 
     -- indent-blankline
-    use({
-      "lukas-reineke/indent-blankline.nvim",
-      config = function()
-        require("plugin-config.indent-blankline")
-      end,
-    })
+    -- 注释掉 
+    -- 1. 大工程影响速度
+    -- 2. 影响代码复制
+    -- use({
+    --   "lukas-reineke/indent-blankline.nvim",
+    --   config = function()
+    --     require("plugin-config.indent-blankline")
+    --   end,
+    -- })
 
     -- toggleterm
     use({

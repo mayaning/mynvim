@@ -15,4 +15,4 @@ end
 -- 设置支持真彩色
 vim.o.termguicolors = true
 -- 设置背景色
-vim.o.background = "dark"
+vim.o.background = "light"

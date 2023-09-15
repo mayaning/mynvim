@@ -176,7 +176,6 @@ packer.startup({
     -- fidget.nvim
     use({
       "j-hui/fidget.nvim",
-      tag = 'legacy',
       config = function()
         require("plugin-config.fidget")
       end,

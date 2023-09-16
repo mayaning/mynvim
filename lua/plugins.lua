@@ -359,6 +359,21 @@ packer.startup({
     -- github copilot 
     use("github/copilot.vim")
 
+    -- cscope支持
+    use({
+            "dhananjaylatkar/cscope_maps.nvim",
+            requires = {
+                {"folke/which-key.nvim"},
+                {"nvim-telescope/telescope.nvim"},
+                {"ibhagwan/fzf-lua"},
+                {"nvim-tree/nvim-web-devicons"}
+            },
+            config = function()
+                require("plugin-config.cscope_maps")
+            end,
+	})
+
+
     -- 熟练的使用ctags仅需记住下面七条命令：
     -- 1．$ctags –R * ($为Linux系统Shell提示符,这个命令上面已经有所介绍)
     -- 2. $ vi –t tag (请把tag替换为您欲查找的变量或函数名)

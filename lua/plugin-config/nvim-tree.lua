@@ -104,11 +104,11 @@ nvim_tree.setup({
     -- 隐藏根目录
     hide_root_folder = false,
     -- 自定义列表中快捷键
-    mappings = {
+    -- mappings = {
       -- 只用内置快捷键
-      custom_only = true,
+      -- custom_only = true,
       -- list = list_keys,
-    },
+    -- },
     -- 不显示行数
     number = false,
     relativenumber = false,

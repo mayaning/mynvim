@@ -1,4 +1,4 @@
-local colorscheme = "one"
+local colorscheme = "onedark"
 -- tokyonight
 -- OceanicNext
 -- gruvbox

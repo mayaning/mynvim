@@ -415,6 +415,17 @@ packer.startup({
     -- use("jbyuki/one-small-step-for-vimkind")
     --[[ use("dstein64/vim-startuptime") ]]
 
+
+    use {
+        'tomasky/bookmarks.nvim',
+        -- tag = 'release' -- To use the latest release
+        event = "VimEnter",
+        config = function()
+            require('bookmarks').setup()
+            require('telescope').load_extension('bookmarks')
+        end
+    }
+
     if paccker_bootstrap then
       packer.sync()
     end

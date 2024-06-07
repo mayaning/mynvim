@@ -32,7 +32,7 @@ mason.setup({
 -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 mason_config.setup({
   ensure_installed = {
---   "lua-language-server",
+    "lua_ls",
     "tsserver",
     "tailwindcss",
     "bashls",

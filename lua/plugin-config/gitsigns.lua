@@ -54,5 +54,3 @@ require('gitsigns').setup {
     col = 1
   },
 }
-
-set statusline+=%{get(b:,'gitsigns_status','')}
